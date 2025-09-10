@@ -107,3 +107,61 @@ print("The sum of digits is:", sum_digits)
 
 
 #Nested For Loop
+
+#Write a program to print a right-angled triangle pattern of * with 5 rows.
+
+rows = 5
+
+for i in range(1, rows + 1):
+    print("*" * i)
+    
+    
+
+
+
+#Write a program to print a multiplication table from 1 to 5 using nested for loops.
+
+for i in range(1, 6):  #for numbers 1 to 5
+    print(f"\nMultiplication Table of {i}:")
+    for j in range(1, 11):  # for 1 to 10
+        print(f"{i} x {j} = {i * j}")
+
+
+
+
+#Write a program to print a square pattern of numbers (1 to 5).
+
+n = 5
+
+for i in range(1, n + 1):
+    for j in range(1, n + 1):
+        print(j, end=" ")
+    print()  
+
+
+
+#Write a program to print a pyramid pattern of *
+
+rows = 5
+
+for i in range(1, rows + 1):
+    print(" " * (rows - i), end="")
+    print("*" * (2 * i - 1))
+
+
+
+#Write a program to print numbers in triangular form
+
+rows = 5
+
+for i in range(1, rows + 1):
+    for j in range(1, i + 1):
+        print(j, end=" ")
+    print()  
+    
+    
+    
+    
+#Break Statement 
+
+#Write a program to print numbers from 1 to 10, but stop if the number is 5.
