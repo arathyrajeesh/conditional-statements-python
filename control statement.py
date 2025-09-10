@@ -189,4 +189,55 @@ for char in word:
 
 #Continue Statement
 
-#Write a program to print numbers from 1 to 10 but skip 5. 
+#Write a program to print numbers from 1 to 10 but skip 5.
+
+for num in range(1, 11):
+    if num == 5:
+        continue   
+    print(num)
+    
+    
+    
+    
+#Write a program to print all numbers from 1 to 20 except even numbers.
+
+for i in range(1,21):
+    if i % 2== 0:
+        continue
+    print(i)
+    
+    
+#Write a program to print characters in a string except for vowels.
+
+
+text = input("Enter a string: ")
+vowels = "aeiouAEIOU"
+
+for char in text:
+    if char in vowels:
+        continue  
+    print(char, end="")  
+
+
+
+
+#Write a program to calculate the sum of numbers from 1 to 10, skipping multiples of 3.
+
+total = 0
+
+for num in range(1, 11):
+    if num % 3 == 0:
+        continue  
+    total += num
+
+print("The sum is:", total)
+
+
+
+#Write a program to print multiplication table of 6, skipping multiples of 12.
+
+for i in range(1, 11):
+    a = 6 * i
+    if a % 12 == 0:
+        continue  
+    print(f"6 x {i} = {a}")
