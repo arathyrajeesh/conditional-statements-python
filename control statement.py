@@ -165,3 +165,28 @@ for i in range(1, rows + 1):
 #Break Statement 
 
 #Write a program to print numbers from 1 to 10, but stop if the number is 5.
+
+for num in range(1, 11):
+    if num == 5:
+        break   
+    print(num)
+    
+    
+    
+    
+# Write a program to read characters from a string and stop when a is found.
+
+word = input("Enter a string: ")
+
+for char in word:
+    if char == 'a':
+        print("Found 'a' Stopping the loop.")
+        break
+    print(char)
+    
+
+
+
+#Continue Statement
+
+#Write a program to print numbers from 1 to 10 but skip 5. 
