@@ -113,7 +113,9 @@ print("The sum of digits is:", sum_digits)
 rows = 5
 
 for i in range(1, rows + 1):
-    print("*" * i)
+    for j in range(1,i+1):
+        print(end="*")
+    print()
     
     
 
@@ -145,9 +147,11 @@ for i in range(1, n + 1):
 rows = 5
 
 for i in range(1, rows + 1):
-    print(" " * (rows - i), end="")
-    print("*" * (2 * i - 1))
-
+    for j in range(rows - i):
+        print(" ", end="")
+    for k in range(1, i + 1):
+        print("*", end=" ")
+    print()  
 
 
 #Write a program to print numbers in triangular form
@@ -173,6 +177,25 @@ for num in range(1, 11):
     
     
     
+#Write a program to search for a given digit in a number; stop when found.
+
+
+digit = int(input("Enter a digit: "))
+search = int(input("Enter a number to search: "))
+
+found = False
+
+while digit > 0:
+    num = digit % 10   
+    if num == search:
+        print("Item found")
+        found = True
+        break          
+    digit //= 10
+
+if not found:
+    print("Item not found")
+
     
 # Write a program to read characters from a string and stop when a is found.
 
@@ -180,12 +203,32 @@ word = input("Enter a string: ")
 
 for char in word:
     if char == 'a':
-        print("Found 'a' Stopping the loop.")
+        print("Found 'a' ")
         break
     print(char)
     
+    
+    
+#Write a program to print a multiplication table of 7 but stop when the result exceeds 50.
+
+num = 7
+for i in range(1, 11):  
+    result = num * i
+    if result > 50:      
+        break
+    print(f"{num} x {i} = {result}")
 
 
+
+#Write a program to find the first divisor of a number (greater than 1).
+
+num =int(input('enter a number'))
+
+for i in range(2,num+1):
+    if num%i==0:
+        print(i)
+        break
+    
 
 #Continue Statement
 
@@ -207,18 +250,18 @@ for i in range(1,21):
     print(i)
     
     
+    
+
 #Write a program to print characters in a string except for vowels.
 
 
 text = input("Enter a string: ")
 vowels = "aeiouAEIOU"
 
-for char in text:
-    if char in vowels:
+for i in text:
+    if i in vowels:
         continue  
-    print(char, end="")  
-
-
+    print(i, end="")  
 
 
 #Write a program to calculate the sum of numbers from 1 to 10, skipping multiples of 3.
@@ -229,6 +272,7 @@ for num in range(1, 11):
     if num % 3 == 0:
         continue  
     total += num
+
 
 print("The sum is:", total)
 
