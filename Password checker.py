@@ -45,3 +45,20 @@ def password_checker(password):
 
 a = input("Enter a password: ")
 print(password_checker(a))
+
+
+
+
+import re
+def passwordCheck(inputPassword):    
+    length_check = len(inputPassword) >= 8
+    character = re.search(r"[.?!@&]", inputPassword) is not None
+    uppercase = re.search(r"[A-Z]", inputPassword) is not None
+    lowercase = re.search(r"[a-z]", inputPassword) is not None
+    number = re.search(r"[0-9]", inputPassword) is not None    
+    if length_check and character and uppercase and lowercase and number:
+        print(" Strong password")
+    else:
+        print(" Weak password")
+password =input('enter a password:')
+passwordCheck(password)
