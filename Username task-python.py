@@ -13,6 +13,8 @@ def username_generator(first_name, last_name):
     username = f"{first_part}{last_name}"
 
     username += str(random.randint(10, 99))
+    
+    username += random.choice(['@', '/', '$'])  
 
     return username
 
