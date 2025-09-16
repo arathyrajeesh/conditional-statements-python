@@ -1,3 +1,5 @@
 import math
-print(math.sqrt(16)) 
-print(math.factorial(3))
+
+
+print("Value of pi:",math.pi)
+print("Square root of 16:",math.sqrt(16))
